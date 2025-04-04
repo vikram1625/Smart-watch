@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartX Watch - Redefining Smartness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+}
+
+header h1 {
+  color: #0ff;
+  font-size: 30px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0ff;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10% 50px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 600px;
+  animation: fadeInLeft 1.5s ease;
+}
+
+.hero-text h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #0ff;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.buy-btn {
+  padding: 12px 30px;
+  background: #0ff;
+  color: #000;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.buy-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(0, 255, 255, 0.8);
+}
+
+.watch-img {
+  width: 380px;
+  animation: pulseGlow 3s infinite ease-in-out;
+  filter: drop-shadow(0 0 20px #0ff);
+  transition: transform 0.5s ease-in-out;
+}
+
+.watch-img:hover {
+  transform: scale(1.05) rotate(3deg);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px #0ff);
+  }
+  50% {
+    filter: drop-shadow(0 0 35px #0ff);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.features {
+  padding: 100px 10%;
+  background: #1b1b1b;
+  text-align: center;
+}
+
+.features h3 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #0ff;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.feature-box {
+  background: #222;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+.feature-box i {
+  font-size: 30px;
+  color: #0ff;
+  margin-bottom: 15px;
+}
+
+.feature-box p {
+  font-size: 16px;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 10%;
+  background: #0d0d0d;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  color: #0ff;
+  margin: 0 15px;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+  transform: scale(1.3);
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SmartX</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#features">Features</a>
+      <a href="#buy">Buy</a>
+    </nav>
+  </header>  <section class="hero">
+    <div class="hero-text">
+      <h2>Experience the Future</h2>
+      <p>SmartX Watch combines style and innovation in a sleek, modern wearable. Control your life, track your health, and stay connected effortlessly.</p>
+      <button class="buy-btn" onclick="scrollToBuy()">Buy Now</button>
+    </div>
+    <img class="watch-img" src="./pngtree-the-smartwatch-banner-png-image_14878614.png" alt="Smart Watch" />
+  </section>  <section class="features" id="features">
+    <h3>Why SmartX is the Best</h3>
+    <div class="features-grid">
+      <div class="feature-box">
+        <i class="fas fa-heartbeat"></i>
+        <p>Advanced Heart Rate Monitoring</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-moon"></i>
+        <p>Sleep & Stress Analysis</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-music"></i>
+        <p>Music Control & Bluetooth Calling</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-tint"></i>
+        <p>Water & Dust Resistance</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-battery-full"></i>
+        <p>7 Days Battery Life</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-wifi"></i>
+        <p>Smart Notifications & AI Assistant</p>
+      </div>
+    </div>
+  </section>  <section class="hero" id="buy">
+    <div class="hero-text">
+      <h2>Buy SmartX Today</h2>
+      <p>Now available at just <strong>$199</strong>. Get your stylish companion today and take charge of your lifestyle with cutting-edge tech on your wrist.</p>
+      <button class="buy-btn">Order Now</button>
+    </div>
+    <img class="watch-img" src="./pngtree-smart-watch-png-image_18709852.png" alt="SmartX Product" />
+  </section>  <footer class="footer">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    &copy; 2025 SmartX Inc. All Rights Reserved.
+  </footer>  <script>
+    function scrollToBuy() {
+      document.getElementById("buy").scrollIntoView({ behavior: "smooth" });
+    }
+  </script></body>
+</html>
